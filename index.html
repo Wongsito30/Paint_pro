@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Paint Locochon</title>
+</head>
+<body>
+<div class="paintlocochon">
+
+    <div class="side">
+        <div class="menupaint">
+            <div class="menu-content">
+                <header>
+                    <span class="title">Colores:</span>
+                    <span class="pincel">🖌️</span>
+                </header>
+                <div class="description">
+                    <div class="colors-sect">
+                        <button class="color black" value="black"></button>
+                        <button class="color red" value="red"></button>
+                        <button class="color yellow" value="yellow"></button>
+                        <button class="color green" value="green"></button>
+                        <button class="color grey" value="grey"></button>
+                        <button class="color blue" value="blue"></button>
+                        <input type="color" class="color picker" id="picker">
+                    </div>
+                </div>
+            </div>
+            <div class="menu-content">
+                <header>
+                    <span class="title">Figuras:</span>
+                    <span class="figuras">🟣🟪🔺</span>
+                </header>
+                <div class="description">
+                    <div class="Figure-sect">
+                        <button class="fig btn material-symbols-outlined" value="square" data-divbtn="cuadrado">square</button>
+                        <button class="fig btn material-symbols-outlined" value="rectangle" data-divbtn="rectangulo">rectangle</button>
+                        <button class="fig btn material-symbols-outlined" value="circle" data-divbtn="circulo">circle</button>
+                        <button class="fig btn material-symbols-outlined" value="line" data-divbtn="linea">pen_size_2</button>
+                        <button class="fig btn material-symbols-outlined" value="pencil" data-divbtn="lapiz">edit</button>
+                        <button class="fig btn" value="oval" data-divbtn="ovalo"><img src="svg/wired-outline-1415-elipse.svg"/></button>
+                        <button class="fig btn material-symbols-outlined" value="diamond" data-divbtn="rombo">stat_0</button>
+                        <button class="fig btn material-symbols-outlined" value="triangle" data-divbtn="triangulo">change_history</button>
+                        <button class="fig btn material-symbols-outlined" value="pent" data-divbtn="pentagono">pentagon</button>
+                        <button class="fig btn material-symbols-outlined" value="hex" data-divbtn="hexagono">hexagon</button>
+                        <button class="fig btn" value="trapezoid" data-divbtn="trapezoide"><img src="img/trapezoid.png" width="32" height="32"/></button>
+                        <button class="fig btn material-symbols-outlined" value="text" data-divbtn="text">t</button>
+                        <button class="fig btn material-symbols-outlined" value="fill" id="fill" title="Relleno">water_drop</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-content">
+                <header>
+                    <span class="title">Guardar y abrir:</span>
+                    <span class="image">🌄</span>
+                </header>
+                <div class="description">
+                    <div class="Figure-sect">
+                        <button class="btn material-icons" id="toJPG">insert_photo</button>
+                        <button class="btn material-icons" id="toPNG">insert_photo</button>
+                        <button class="btn material-icons" id="toPDF">picture_as_pdf</button>
+                        <button class="btn material-icons" id="Save">save</button>
+                        <button class="buttonOpen" id="openfile">📂</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-content">
+                <header>
+                    <span class="title">herramientas:</span>
+                    <span class="herramienta">🛠️</span>
+                </header>
+                <div class="description">
+                    <div class="tools_sect">
+                        <button class="btn material-icons" id="undo">arrow_downward</button>
+                        <button class="btn material-icons" id="redo">arrow_upward</button>
+                        <button class="btn material-icons" id="move">open_with</button>
+                        <button class="btn material-icons" id="ratio">aspect_ratio</button>
+                        <button class="btn material-icons" id="rotate">rotate_90_degrees_cw</button>
+                        <button class="btn material-icons" id="eraser">delete</button>
+                        <button class="btn material-icons" id="eraser_pix">delete_outline</button>
+                        <button class="btn material-icons" id="restart">restart_alt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tools">
+            <span>Options</span>
+            <div class="tools_sect">
+                <span>Size: </span>
+                <input type="range" min="1" max="100" id="range" value="1">
+                <span id="data">1</span>
+            </div>
+
+            <div class="menu-figs">
+                <button class="post" value="atras"><img src="./img/fondo.png"></button>
+                <button class="post" value="adelante"><img src="./img/frente.png"></button>
+                <button class="post" value="fondo"><img src="./img/atras.png"></button>
+                <button class="post" value="frente"><img src="./img/adelante.png"></button>
+            </div>
+        </div>
+        
+    </div>
+    <canvas id="canvas" class="whiteboard">
+    </canvas>
+   
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script type="text/javascript" src="./js/Main.js"></script>
+<script src="./js/fill.js"></script>
+</body>
+</html>
